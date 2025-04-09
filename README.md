@@ -1,2 +1,2 @@
 # Terminal-Adventure-Game
-Just a Codedex Python Project
+My first Codedex Python Checkpoint Project
