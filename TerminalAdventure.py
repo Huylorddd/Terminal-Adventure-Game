@@ -4,6 +4,12 @@ import time
 #####################################################
 # Function(s):
 def choices(xp, money, level, rod):
+# hidden level up if xp >= 100:
+    while xp >= 100:
+        level += xp / 100
+        xp_remaining %= 100
+        xp = 0 + xp_remaining
+    
     print('What do you want to do?\n')
     time.sleep(1.5)
     print('1. Go fishing')
@@ -104,8 +110,8 @@ def store(money, rod):
     print('These items you can buy:\n')
     time.sleep(1.5)
     
-    ####################################################################
-    #### THE ITEMS IN THE STORE ARE BASED ON THE ROD YOU'RE HAVING #####
+    ######################################################################
+    #### THE ITEMS IN THE STORE ARE BASED ON THE ITEMS YOU'VE BOUGHT #####
     if rod == 'BASIC Fishing Rod':
         print('1. AQUATIC Fishing Rod ($100.0)')
         print('2. CODEDEX Fishing Rod ($500.0)')
@@ -173,7 +179,8 @@ def store(money, rod):
             print('Invalid choice. Please try again.\n')
             store(money, rod)
         return money, rod
-#####################################################
+##########################################################
+################### GAME STARTS HERE #####################
 
 # Introduction
 print('\n\n\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ ')
@@ -186,7 +193,7 @@ for i in range(0, 3):
     print(' ' * 18 + '.\n')
 
 time.sleep(1.5)
-print(' 5:30 A.M (DAWN)\n')
+print('          5:30 A.M (DAWN)\n')
 time.sleep(1.5)
 print('You\'ve just found a comfortable place for fishing.\n')
 time.sleep(1.5)
