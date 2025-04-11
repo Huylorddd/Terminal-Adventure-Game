@@ -206,7 +206,7 @@ time.sleep(2)
 
 ## stats:
 xp = 0
-money = 500
+money = 0 ## Change here if you want to cheat !!!!!!
 level = 1
 rod = 'BASIC Fishing Rod'
 
