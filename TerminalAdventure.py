@@ -28,7 +28,13 @@ def choices(xp, money, level, rod):
         stats(xp, money, level, rod)
         choices(xp, money, level, rod)
     elif choice == '4':
-        print('Thanks for playing!')
+        print('All the progresses will be erased. Are you sure to quit the game?')
+        print('                [YES]                   [NO]')
+        quit = input('>')
+        if quit == 'YES' or 'yes' or 'Yes':
+            print('                        Thanks for playing !')
+        else:
+            choices(xp, money, level, rod)
     else:
         print('Invalid choice. Please try again.')
         choices(xp, money, level, rod)
