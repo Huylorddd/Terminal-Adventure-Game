@@ -30,10 +30,13 @@ def choices(xp, money, level, rod):
     elif choice == '4':
         print('All the progresses will be erased. Are you sure to quit the game?')
         print('                [YES]                   [NO]')
-        quit = input('>')
-        if quit == 'YES' or 'yes' or 'Yes':
-            print('                        Thanks for playing !')
+        quit = input('> ')
+        if quit == 'Yes' or quit == 'yes' or quit == 'YES':
+            print('                   Thanks for playing !')
+        elif quit == 'No' or quit == 'no' or quit == 'NO':
+            choices(xp, money, level, rod)
         else:
+            print('Invalid choice.')
             choices(xp, money, level, rod)
     else:
         print('Invalid choice. Please try again.')
@@ -199,7 +202,7 @@ for i in range(0, 3):
     print(' ' * 18 + '.\n')
 
 time.sleep(1.5)
-print('          5:30 A.M (DAWN)\n')
+print('            5:30 A.M (DAWN)\n')
 time.sleep(1.5)
 print('You\'ve just found a comfortable place for fishing.\n')
 time.sleep(1.5)
