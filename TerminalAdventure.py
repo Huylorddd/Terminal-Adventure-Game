@@ -6,9 +6,9 @@ import time
 def choices(xp, money, level, rod):
 # hidden level up if xp >= 100:
     while xp >= 100:
+        print('You\'ve leveled up to lvl ' + str(level + 1) + '!')
         level += xp / 100
-        xp_remaining %= 100
-        xp = 0 + xp_remaining
+        xp %= 100
     
     print('What do you want to do?\n')
     time.sleep(1.5)
