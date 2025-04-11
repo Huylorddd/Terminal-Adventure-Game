@@ -7,8 +7,8 @@ def choices(xp, money, level, rod):
 # hidden level up if xp >= 100:
     while xp >= 100:
         print('You\'ve leveled up to lvl ' + str(level + 1) + '!')
-        level += xp / 100
-        xp %= 100
+        level += int(xp / 100) ## to avoid float level like 2.08 or something alike
+        xp %= 100 ## after leveling up the xp reset to the zero + the remain
     
     print('What do you want to do?\n')
     time.sleep(1.5)
