@@ -9,6 +9,8 @@ def choices(xp, money, level, rod):
         print('You\'ve leveled up to lvl ' + str(level + 1) + '!')
         level += int(xp / 100) ## to avoid float level like 2.08 or something alike
         xp %= 100 ## after leveling up the xp reset to the zero + the remain
+        print('Remaining xp to level up: ' + str(100 - xp) + ' xp')
+        print('-------------------\n')
     
     print('What do you want to do?\n')
     time.sleep(1.5)
@@ -93,24 +95,37 @@ def fishing(xp, money, level, rod):
         xp += 5.0
         money += 5.0
         print('You caught a salmon!     +5.0 xp  +$5.0')
+        if xp < 100:
+            print('Remaining xp to level up: ' + str(100 - xp) + ' xp')
     elif fish == 2:
         xp += 4.0
         money += 4.5
         print('You caught a trout!      +4.0 xp  +$4.5')
+        if xp < 100:
+            print('Remaining xp to level up: ' + str(100 - xp) + ' xp')
     elif fish == 3:
         xp += 3.5
         money += 5.0
         print('You caught a bass!       +3.5 xp  +$5.0')
+        if xp < 100:
+            print('Remaining xp to level up: ' + str(100 - xp) + ' xp')
     elif fish == 4:
         xp += 8.0
         money += 7.0
         print('You caught a catfish!     +8.0 xp  +$7.0')
+        if xp < 100:
+            print('Remaining xp to level up: ' + str(100 - xp) + ' xp')
     elif fish == 5:
         xp += 10.0
         money += 10.0
         print('You caught a gold fish!   +10.0 xp  +$10.0')
+        if xp < 100:
+            print('Remaining xp to level up: ' + str(100 - xp) + ' xp')
     else:
         print('You caught nothing...     +0.0 xp  +$0.0')
+        if xp < 100:
+            print('Remaining xp to level up: ' + str(100 - xp) + ' xp')
+    print('-------------------\n')
     return xp, money, level
 
 def store(money, rod):
